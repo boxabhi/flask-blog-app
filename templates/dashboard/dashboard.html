@@ -1,0 +1,46 @@
+{% extends "dashboard/dash.html" %}
+
+{% block body %}
+
+
+ <!-- Hero Section-->
+ <section style="background: url({{url_for('static', filename='img/featured-pic-2.jpeg')}}); background-size: cover; background-position: center center; height: 300px;" class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <h1 class="text-uppercase bg-dark p-3" style="margin-top: -100px">Welcome User | {{name.user}}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 
+<div class="container mt-5 p-5">
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Post</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                      <button class="btn btn-danger">Delete</button></td>
+                      </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+   -->
+
+</div>
+
+{% endblock %}

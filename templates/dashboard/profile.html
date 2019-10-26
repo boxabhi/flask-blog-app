@@ -1,0 +1,67 @@
+{% extends "dashboard/dash.html" %}
+
+{% block body %}
+
+
+
+<div class="container mt-5">
+    <h4 class="pb-2 text-center text-uppercase m-3 text-primary">Profile Page</h4>
+    <div class="row">
+            <div class="col-lg-3">
+            </div>
+        <div class="col-lg-6 ">
+            <div class="card p-5">
+            <div class="text-center">
+                {% if user.profile_image  %}
+                <img class="rounded-circle img-fluid"
+                 src="/static/image/profile/{{user.profile_image}}"
+                  style="height: 120px; width: 120px;">
+                {% else %}
+                <img class="rounded-circle img-fluid"
+                 src="https://static.thenounproject.com/png/340719-200.png" 
+                 style="height: 120px;">
+               {% endif %}
+
+            </div>
+
+            <form method="POST" enctype="multipart/form-data">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="alert alert-success mt-2" role="alert">
+                    {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+                  </div>
+                {% endif %}
+              {% endwith %}
+                <div class="form-group">
+                    <label for="exampleInputPassword1">User name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" value={{session.user}} disabled>
+                </div>
+                <div class="input-group">
+
+                        <div class="custom-file">
+                                <input type="file" name="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                              </div>
+                        <!-- <div class="input-group-prepend">
+                        <label for="exampleInputPassword1">Upload your latest Pic here</label>
+                        <input type="file" name="file" class="form-control" >
+                </div> -->
+                </div>
+                
+                <button type="submit" class="btn btn-primary mt-4">Update</button>
+            </form>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+            <!-- <img src="{{url_for('static',filename='img/gallery-1.jpg')}}" class=" img-responsive img-fluid">
+        </div> -->
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

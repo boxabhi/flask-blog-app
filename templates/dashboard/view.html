@@ -1,0 +1,48 @@
+
+{% extends "dashboard/dash.html" %}
+
+{% block body %}
+
+   
+
+
+    <div class="container mt-5 p-5">
+      {% if allData %} 
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Content</th>
+                <th scope="col"></th>
+                <th scope="col" class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+    
+              {% for data in allData %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td class="text-striped" id="show">{{data.title [:15] | safe}}</td>
+                <td class="text-justify" id="show">{{data.content [:25] | safe}}</td>
+                <td></td>
+                <td>
+              <a href="detail-view/{{session}}-{{data.title}}"><button class="btn btn-success">View</button> </a>
+                   <a href="edit/{{data.post_id}}"> <button class="btn btn-dark">Update</button> </a>
+                <a href="delete_post/{{data.post_id}}"><button class="btn btn-danger">Delete</button></td> </a>
+                  </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+          {% else %}
+          <div class="text-center">
+          <h2 class="text-center">You have'nt created any post yet.</h2>
+          <a href=/addpost><button class="btn btn-success mt-3">Create one</button> </a>
+          </div>
+          {% endif %}
+
+    </div>
+ 
+    {% endblock %}
