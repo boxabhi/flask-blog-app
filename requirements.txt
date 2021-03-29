@@ -77,7 +77,7 @@ packaging==19.1
 pathtools==0.1.2
 pipenv==2018.11.26
 pycparser==2.19
-Pygments==2.4.2
+Pygments==2.7.4
 pylint==2.3.1
 pymongo==3.9.0
 pyparsing==2.4.2
