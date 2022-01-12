@@ -75,7 +75,7 @@ nltk==3.4.4
 oauthlib==3.1.0
 packaging==19.1
 pathtools==0.1.2
-pipenv==2018.11.26
+pipenv==2022.1.8
 pycparser==2.19
 Pygments==2.4.2
 pylint==2.3.1
