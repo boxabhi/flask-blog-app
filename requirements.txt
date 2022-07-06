@@ -64,7 +64,7 @@ Jinja2==2.10.3
 jsonfield==2.0.2
 kombu==4.3.0
 lazy-object-proxy==1.4.1
-lxml==4.4.1
+lxml==4.9.1
 MarkupSafe==0.23
 mccabe==0.6.1
 mock==3.0.5
